@@ -1,0 +1,21 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open -b chrome",
+    "cy:test": "cypress run --headed -b chrome"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Luis Lugo",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.3.1",
+    "cypress-iframe": "^1.0.1"
+  }
+}
