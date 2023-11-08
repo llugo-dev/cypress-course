@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-describe('Check for mouseove', () => {
-    it('Testing mouseove', () => {
+describe('Check for mousehover', () => {
+    it('Testing mousehover', () => {
 
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/');
 
