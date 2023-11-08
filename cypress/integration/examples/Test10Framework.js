@@ -39,5 +39,15 @@ describe('Use of hooks', () => {
 
         productspage.getProducts(this.data.productName);
         productspage.checkoutProducts().click();
+        cy.get(':nth-child(5) > :nth-child(5) > .btn').click();
+        cy.get('#country').type('United');
+        cy.get('.suggestions > :nth-child(2) > li > a').click();
+        cy.get('#checkbox2').check({force: true});
+        cy.get('input[value="Purchase"]').click();
+        // cy.get('.alert').should('contain.text', 'Success! Thank you! Your order will be delivered in next few weeks :-).');
+        cy.get('.alert').then(function (element) {
+            const text = element.text();
+            expect(text.includes('Success')).to.be.true;
+        });
     });
 });
