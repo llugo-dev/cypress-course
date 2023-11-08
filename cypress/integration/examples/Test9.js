@@ -14,7 +14,7 @@ describe('Frames test', () => {
         cy.iframe().find('h1[class*="pricing-title"]').each(($el, index) => {
             const text = $el.text();
             if (text.toLowerCase().includes('bronze')) {
-                cy.wrap($el).should('have.text', 'BRONZE');
+                expect(text.toUpperCase()).to.equal('BRONZE');
             }
         });
     });

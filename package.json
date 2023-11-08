@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress run --spec cypress/integration/examples/*.js",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- -b chrome",
+    "chromeTestRecord": "npm run test -- --headed -b chrome --record --key be176ec9-d5aa-48f1-ba59-017fe846c99d",
     "cy:run": "cypress run",
     "cy:open": "cypress open -b chrome",
     "cy:test": "cypress run --headed -b chrome"
